@@ -1,7 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-import LandingPage from "./components/LandingPage";
+import AllNotes from "./components/AllNotes";
+import Reminders from "./components/Reminders";
+
+
 
 const AppLayout = () => {
   return (
@@ -19,7 +22,11 @@ const appRouter = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <LandingPage/>,
+        element: <AllNotes />,
+      },
+      {
+        path: "/reminders",
+        element: <Reminders/>,
       },
     ],
   },
