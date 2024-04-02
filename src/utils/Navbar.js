@@ -9,6 +9,9 @@ import {
   Menu,
   NotebookPen,
   Pencil,
+  RefreshCcw,
+  SearchIcon,
+  Settings,
   Trash2,
 } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -29,7 +32,7 @@ export default function Navbar() {
     >
       <List className={`flex flex-col mt-10 bg-[#0D1C2A] h-full text-black `}>
         <div className={`w-full p-5 justify-center items-center mb-10`}>
-          <h1 className={`text-5xl font-bold w-full text-right text-[#66B2FF]`}>
+          <h1 className={`text-5xl font-bold w-full text-right text-[#66B2FF] font-mono`}>
             NOTES
           </h1>
         </div>
@@ -92,7 +95,7 @@ export default function Navbar() {
 
   return (
     <div
-      className={`bg-[#101418] h-24 flex items-center shadow shadow-[#66B2FF]`}
+      className={`bg-[#101418] h-16 flex items-center shadow shadow-[#66B2FF]`}
     >
       <section className={`group w-1/12 flex justify-center items-center`}>
         <Button onClick={toggleDrawer(true)}>
@@ -105,14 +108,32 @@ export default function Navbar() {
         </Drawer>
       </section>
       <section className={`flex h-full justify-center items-center w-1/4`}>
-        <h1 className={`text-5xl text-[#66B2FF]`}>
-          NOTES
-        </h1>
+        <h1 className={`text-5xl text-[#66B2FF] font-mono font-semibold`}>NOTES</h1>
       </section>
-      <section className={`flex h-full justify-center items-center w-full `}>
-        <h1 className={`text-5xl text-[#66B2FF]`}>
-          NOTES
-        </h1>
+      <section className={`flex h-full justify-end items-center w-full `}>
+        <section
+          className={`searchbar justify-end items-center flex p-1 rounded-lg bg-[#66b2ff]`}
+        >
+          <label>
+            <SearchIcon className={`m-2`} />
+          </label>
+          <input
+            className={` w-96 p-2 rounded-lg bg-[#101418] text-[#66b2ff]  `}
+            id="text"
+            type="text"
+            placeholder="Search"
+          ></input>
+        </section>
+        <section
+          className={`settings w-fit flex justify-end items-center pr-10 `}
+        >
+          <RefreshCcw
+            className={`h-10 w-10 text-white m-5 rounded-full p-2 hover:bg-[#66b2ff] hover:text-black duration-200 ease-in-out`}
+          />
+          <Settings
+            className={`h-10 w-10 text-white m-5 rounded-full p-2 hover:bg-[#66B2FF] hover:text-black duration-200 ease-in-out`}
+          />
+        </section>
       </section>
     </div>
   );
