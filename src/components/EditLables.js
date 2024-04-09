@@ -1,13 +1,10 @@
-import { BellRing, Paperclip, Plus, SearchIcon } from "lucide-react";
+import { BellRing, Paperclip, Plus, SearchIcon, Pencil } from "lucide-react";
 import Navbar from "../utils/Navbar";
 
-import TemporaryDrawer from "../utils/Navbar";
-import NoteCard from "./NoteCards";
-
-const Reminders = () => {
+const EditLables = () => {
   return (
     <div
-      className={`bg-[#101418] h-screen overflow-x-hidden overflow-y-scroll scroll-smooth scrollbar-hide`}
+      className={`bg-[#101418] h-screen overflow-x-hidden overflow-y-scroll scroll-smooth`}
     >
       <Navbar />
       <div className={`search_bar_and_other_buttons pt-10 `}>
@@ -19,18 +16,18 @@ const Reminders = () => {
             className={` w-96 p-2 rounded-lg bg-[#13283F] text-[#66b2ff] border border-[#66b2ff] font-mono shadow-sm hover:shadow-md hover:shadow-[#66b2ff] duration-200 ease-in-out shadow-[#66b2ff] `}
             id="text"
             type="text"
-            placeholder="New Reminder"
+            placeholder="New Label"
           ></input>
         </section>
       </div>
       <div
         className={`flex flex-col justify-center items-center h-full w-full text-[#66b2ff]`}
       >
-        <BellRing className={`h-28 w-28`} />
-        <h1>No Reminders yet, set to see them upcoming</h1>
+        <Pencil className={`h-28 w-28`} />
+        <h1>No Label yet, set to see them upcoming</h1>
       </div>
     </div>
   );
 };
 
-export default Reminders;
+export default EditLables;

@@ -3,6 +3,9 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import AllNotes from "./components/AllNotes";
 import Reminders from "./components/Reminders";
+import EditLables from "./components/EditLables";
+import Archive from "./components/Archieve";
+import Trash from "./components/Trash";
 
 
 
@@ -27,6 +30,18 @@ const appRouter = createBrowserRouter([
       {
         path: "/reminders",
         element: <Reminders/>,
+      },
+      {
+        path: "/editLables",
+        element: <EditLables/>,
+      },
+      {
+        path: "/archive",
+        element: <Archive/>,
+      },
+      {
+        path: "/trash",
+        element: <Trash/>,
       },
     ],
   },

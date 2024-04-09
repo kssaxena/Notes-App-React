@@ -5,7 +5,7 @@ const NoteCard = () => {
       >
         <section className={`heading`}>
           <input
-            className={`w-full border-b border-[#66b2ff] bg-[#13283f] text-[#66b2ff] p-2`}
+            className={`w-full border-b font-mono border-[#66b2ff] bg-[#13283f] text-[#66b2ff] p-2`}
             id="text"
             type="text"
             placeholder="Heading"
@@ -13,7 +13,7 @@ const NoteCard = () => {
         </section>
         <section className={`description`}>
           <textarea
-            className={`w-full h-full resize-y bg-[#13283f] p-2 overflow-x-hidden overflow-y-auto text-[#66b2ff]`}
+            className={`w-full h-full resize-y bg-[#13283f] p-2 overflow-x-hidden overflow-y-auto text-[#66b2ff] font-mono`}
             placeholder="Write.."
           ></textarea>
         </section>

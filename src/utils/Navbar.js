@@ -6,8 +6,10 @@ import List from "@mui/material/List";
 import {
   ArchiveRestore,
   BellRing,
+  Link2,
   Menu,
   NotebookPen,
+  PenLine,
   Pencil,
   RefreshCcw,
   SearchIcon,
@@ -60,6 +62,7 @@ export default function Navbar() {
           </h1>
         </Link>
         <Link
+        to={`/editLables`}
           className={`hover:bg-[#66B2FF] duration-200 ease-in-out flex justify-items-start w-full p-3 rounded-r-full mt-1 mb-1 group`}
         >
           <Pencil className={`text-white  group-hover:text-black`} />
@@ -70,6 +73,7 @@ export default function Navbar() {
           </h1>
         </Link>
         <Link
+        to={`/archive`}
           className={`hover:bg-[#66B2FF] duration-200 ease-in-out flex justify-items-start w-full p-3 rounded-r-full mt-1 mb-1 group`}
         >
           <ArchiveRestore className={`text-white  group-hover:text-black`} />
@@ -80,6 +84,7 @@ export default function Navbar() {
           </h1>
         </Link>
         <Link
+        to={`/trash`}
           className={`hover:bg-[#66B2FF] duration-200 ease-in-out flex justify-items-start w-full p-3 rounded-r-full mt-1 mb-1 group`}
         >
           <Trash2 className={`text-white  group-hover:text-black`} />
@@ -108,7 +113,13 @@ export default function Navbar() {
         </Drawer>
       </section>
       <section className={`flex h-full justify-center items-center w-1/4`}>
-        <h1 className={`text-5xl text-[#66B2FF] font-mono font-semibold`}>NOTES</h1>
+        <Link
+        to={`/`}
+          className={`text-5xl text-[#66B2FF] font-mono font-semibold flex justify-center items-center`}
+        >
+          <PenLine className="h-10 w-10 mr-5" />
+          Notes..
+        </Link>
       </section>
       <section className={`flex h-full justify-end items-center w-full `}>
         <section
@@ -125,13 +136,13 @@ export default function Navbar() {
           ></input>
         </section>
         <section
-          className={`settings w-fit flex justify-end items-center pr-10 `}
+          className={`settings w-fit flex justify-end items-center pr-7 pl-7 `}
         >
           <RefreshCcw
-            className={`h-10 w-10 text-white m-5 rounded-full p-2 hover:bg-[#66b2ff] hover:text-black duration-200 ease-in-out`}
+            className={`h-10 w-10 text-white m-2 rounded-full p-2 hover:bg-[#66b2ff] hover:text-black duration-200 ease-in-out `}
           />
           <Settings
-            className={`h-10 w-10 text-white m-5 rounded-full p-2 hover:bg-[#66B2FF] hover:text-black duration-200 ease-in-out`}
+            className={`h-10 w-10 text-white m-2 rounded-full p-2 hover:bg-[#66B2FF] hover:text-black duration-200 ease-in-out `}
           />
         </section>
       </section>
